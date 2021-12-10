@@ -1,0 +1,24 @@
+.loginPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__link{
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+    &__input{
+        width: 200px;
+        margin-bottom: 15px;
+    }
+    &__button{
+        width: 200px;
+        height: 20px;
+        cursor: pointer;
+    }
+}

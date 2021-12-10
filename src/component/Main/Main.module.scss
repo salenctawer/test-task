@@ -1,0 +1,41 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__link{
+        text-decoration: none;
+        cursor: pointer;
+
+    }
+}
+.users{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    &__column{
+        margin-left: 15px;
+        margin-right: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__table{
+        display: flex;
+    }
+}
+.addUsers{
+    margin-top: 250px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__input{
+        width: 200px;
+        margin-bottom: 15px;
+    }
+    &__button{
+        width: 250px;
+        cursor: pointer;
+    }
+}
