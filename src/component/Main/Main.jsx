@@ -13,7 +13,9 @@ const Main = (props) => {
     let password = e.target.value
     props.updatePassword(password)
   }
-  const onSubmit = (e) =>{
+  const onSubmit = () =>{
+    let id = props.id + 1
+    props.updateId(id)
     props.addUser()
   }
 
@@ -23,6 +25,10 @@ const Main = (props) => {
       <div className={styles.users}>
         <h2>Созданные пользователи</h2>
         <div className={styles.users__table}>
+        <div className={styles.users__column}>
+              <h3>Id</h3>
+              {props.users.map(user => <span>{user.id}</span>)}
+          </div>
           <div className={styles.users__column}>
               <h3>Логин</h3>
               {props.users.map(user => <span>{user.login}</span>)}
