@@ -37,6 +37,7 @@ const Login = (props) => {
         Регистрация аккаунта
       </NavLink>
       <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+        <h2>Форма авторизации</h2>
         <input
           className={styles.form__input}
           onChange={(e) => setLogin(e.target.value)}
