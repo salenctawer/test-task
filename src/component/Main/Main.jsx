@@ -4,19 +4,18 @@ import styles from './Main.module.scss'
 import { useForm } from "react-hook-form";
 
 const Main = (props) => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, setValue, formState: { errors } } = useForm();
   const onLoginChange = (e) =>{
-    let login = e.target.value
-    props.updateLogin(login)
+    props.updateLogin(e.target.value)
   }
   const onPasswordChange = (e) =>{
-    let password = e.target.value
-    props.updatePassword(password)
+    props.updatePassword(e.target.value)
   }
   const onSubmit = () =>{
-    let id = props.id + 1
-    props.updateId(id)
+    props.updateId(props.id + 1)
     props.addUser()
+    setValue('login', '')
+    setValue('password', '')
   }
 
   return (
@@ -52,8 +51,7 @@ const Main = (props) => {
               value: true,
               message: 'Это поле обязательно'
             }
-          })}
-          value={props.newUserLogin}
+          })}  
           />
           <span className={styles.form__error}>{errors.login && errors.login.message}</span> 
           <input className={styles.form__input}
@@ -67,7 +65,6 @@ const Main = (props) => {
               message: 'Это поле обязательно'
             }
           })}
-          value={props.newUserPassword}
           />
           <span className={styles.form__error}>{errors.password && errors.password.message}</span> 
           <button className={styles.form__button} type='submit'>Зарегистрироваться</button>

@@ -19,8 +19,6 @@ const usersReducer = (state = initialState, action) =>{
             let id = state.idCount
             return{
                 ...state,
-                newUserLogin: '',
-                newUserPassword: '',
                 users: [...state.users, {id:id, login:login, password:password}]
             }
         case UPDATE_NEW_USER_LOGIN:
