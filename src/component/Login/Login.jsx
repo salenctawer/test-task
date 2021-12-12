@@ -40,7 +40,6 @@ const Login = (props) => {
         <h2>Форма авторизации</h2>
         <input
           className={styles.form__input}
-          onChange={(e) => setLogin(e.target.value)}
           name="login"
           type="text"
           placeholder="Введите логин"
@@ -57,6 +56,8 @@ const Login = (props) => {
         </span>
         <input
           className={styles.form__input}
+          name="password"
+          type="text"
           placeholder="Введите пароль"
           {...register("password", {
             onChange: onPasswordChange,

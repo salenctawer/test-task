@@ -34,19 +34,19 @@ const Main = (props) => {
           <div className={styles.users__column}>
             <h3>Id</h3>
             {props.users.map((user) => (
-              <span>{user.id}</span>
+              <span key={user.id}>{user.id}</span>
             ))}
           </div>
           <div className={styles.users__column}>
             <h3>Логин</h3>
             {props.users.map((user) => (
-              <span>{user.login}</span>
+              <span key={user.id}>{user.login}</span>
             ))}
           </div>
           <div className={styles.users__column}>
             <h3>Пароль</h3>
             {props.users.map((user) => (
-              <span>{user.password}</span>
+              <span key={user.id}>{user.password}</span>
             ))}
           </div>
         </div>
